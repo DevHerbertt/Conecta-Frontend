@@ -1,51 +1,45 @@
-#Conectár - Frontend (ReactJS)#
-Frontend da aplicação de gerenciamento de usuários, desenvolvida em ReactJS com TypeScript, como parte do desafio técnico da Conectár.
+##Conectár - Frontend (ReactJS)
+Este é o frontend da aplicação de gerenciamento de usuários, desenvolvida em ReactJS com TypeScript, como parte do desafio técnico da Conectár.
 
-✨ Funcionalidades
+##✨ Funcionalidades Implementadas
 Autenticação:
-
 Telas de login e cadastro com integração ao backend.
 
-Rotas Protegidas:
-
+##Rotas Protegidas:
 Acesso condicionado ao status de autenticação e papel do usuário (admin, comum).
 
-Painel de Administração:
-
+##Painel de Administração:
 Listagem de usuários com filtros (nome, role).
-
 Ordenação por: ID, nome, e-mail, criação e último login.
-
 Permite alteração de roles, exclusão e exibição de status (Ativo/Inativo).
 
-Página de Perfil:
-
+##Página de Perfil (Home):
 Visualização e edição do nome do usuário logado.
 
-🧠 Tecnologias Utilizadas
+##🧠 Tecnologias Utilizadas
 Framework: ReactJS
 
 Linguagem: TypeScript
 
 Roteamento: React Router DOM
 
-Estado Global: React Context API
+Gerenciamento de Estado: React Context API
 
-Estilização: CSS puro (com variáveis CSS)
+Estilização: CSS puro (com variáveis CSS para consistência)
 
 HTTP Client: Axios
 
 Ícones: Lucide React
 
-⚙️ Como Rodar o Projeto
+##⚙️ Como Configurar e Executar
 ✅ Pré-requisitos
-Node.js v18 ou superior
+Node.js (v18 ou superior recomendado)
 
 npm ou Yarn
 
-Backend rodando (geralmente em: http://localhost:3000)
+Backend da aplicação Conectár rodando (geralmente em: http://localhost:3000)
 
-📦 Instalação
+##📦 Instalação e Execução
 bash
 Copiar
 Editar
@@ -59,17 +53,14 @@ cd Conecta-Frontend
 npm install
 # ou
 yarn
-🚀 Execução
-bash
-Copiar
-Editar
+
 # Inicie o app em modo de desenvolvimento
 npm start
 # ou
 yarn start
 O frontend será iniciado em http://localhost:3001 (ou outra porta disponível).
 
-🧱 Estrutura e Decisões de Arquitetura
+##📁 Estrutura e Decisões de Arquitetura
 Componentização: Interface dividida em componentes reutilizáveis e modulares.
 
 Context API: Controle centralizado do estado de autenticação (usuário + token).
@@ -82,10 +73,15 @@ Feedback ao Usuário: Carregamentos e erros são tratados nas operações assín
 
 Atualização de Perfil: Usuários podem alterar seu nome na página de perfil.
 
-⚠️ Limitações Conhecidas
-Troca de Senha: Ainda não implementada. Exige endpoint seguro no backend com hash.
+##🔐 Variáveis de Ambiente
+Um arquivo .env pode ser criado na raiz do projeto para futuras customizações.
 
-Login Social: Integração com Google/Microsoft ainda fora do escopo atual.
+Atualmente, a URL da API está fixa no arquivo services/api.ts.
 
-📁 Variáveis de Ambiente
-O arquivo .env pode ser criado na raiz para customização futura. No momento, a URL da API está fixa no arquivo services/api.ts.
+##⚠️ Limitações Conhecidas
+Troca de Senha:
+Ainda não implementada. Requer um endpoint seguro no backend com hash de senha.
+
+Login Social (Google/Microsoft):
+Ainda fora do escopo atual.
+
