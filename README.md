@@ -1,3 +1,70 @@
+Conectár - Frontend (ReactJS)
+Este é o frontend da aplicação de gerenciamento de usuários desenvolvida com ReactJS como parte do desafio técnico da Conectár.
+
+Funcionalidades Implementadas
+Autenticação: Telas de Login e Cadastro de usuários, integradas com o backend.
+
+Rotas Protegidas: Gerenciamento de rotas com base no status de autenticação e papel (role) do usuário.
+
+Painel de Administração: Listagem de usuários com opções de filtro (por nome, role) e ordenação (por ID, nome, e-mail, criação, último login). Permite alterar roles e excluir usuários. Exibe status de atividade (Ativo/Inativo).
+
+Página de Perfil (Home): Exibe as informações do usuário logado e permite a atualização do nome.
+
+Tecnologias Utilizadas
+Framework: ReactJS
+
+Linguagem: TypeScript
+
+Roteamento: React Router DOM
+
+Gerenciamento de Estado: React Context API
+
+Estilização: CSS puro (com variáveis CSS para consistência)
+
+Requisições HTTP: Axios
+
+Ícones: Lucide React
+
+Como Configurar e Executar
+Pré-requisitos
+Node.js (v18 ou superior recomendado)
+
+npm ou Yarn
+
+O backend da aplicação Conectár deve estar rodando (geralmente em http://localhost:3000).
+
+Instalação e Execução
+Clone este repositório:
+git clone https://github.com/DevHerbertt/Conecta-Frontend.git
+
+Navegue até a pasta do projeto:
+cd Conecta-Frontend
+
+Instale as dependências:
+npm install (ou yarn)
+
+Crie um arquivo .env na raiz do projeto (se houver variáveis de ambiente no frontend, embora o api.ts esteja fixo no momento).
+
+Inicie o aplicativo em modo de desenvolvimento:
+npm start (ou yarn start)
+
+O frontend estará acessível em http://localhost:3001 (ou outra porta disponível).
+
+Decisões de Design e Arquitetura
+Componentização: A interface é dividida em componentes reutilizáveis para melhor organização e manutenibilidade.
+
+Context API: Utilizada para gerenciamento global do estado de autenticação (usuário e token), evitando prop-drilling.
+
+Rotas Protegidas: Implementação de um ProtectedRoute para controlar o acesso a páginas com base na autenticação e role do usuário.
+
+Estilização: Uso de CSS puro com variáveis para manter a simplicidade, consistência visual e responsividade.
+
+Requisições Assíncronas: Gerenciamento de estados de carregamento e erro para feedback ao usuário durante as operações de API.
+
+Atualização de Perfil (Nome): Funcionalidade para usuários atualizarem seu nome diretamente na página de perfil.
+
+Limitações Conhecidas: A troca de senha requer um endpoint dedicado no backend para ser implementada de forma segura (hash da senha), e o login social com Google/Microsoft não foi implementado neste escopo.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
