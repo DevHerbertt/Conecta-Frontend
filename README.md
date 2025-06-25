@@ -1,113 +1,91 @@
-Conectár - Frontend (ReactJS)
-Este é o frontend da aplicação de gerenciamento de usuários desenvolvida com ReactJS como parte do desafio técnico da Conectár.
+#Conectár - Frontend (ReactJS)#
+Frontend da aplicação de gerenciamento de usuários, desenvolvida em ReactJS com TypeScript, como parte do desafio técnico da Conectár.
 
-Funcionalidades Implementadas
-Autenticação: Telas de Login e Cadastro de usuários, integradas com o backend.
+✨ Funcionalidades
+Autenticação:
 
-Rotas Protegidas: Gerenciamento de rotas com base no status de autenticação e papel (role) do usuário.
+Telas de login e cadastro com integração ao backend.
 
-Painel de Administração: Listagem de usuários com opções de filtro (por nome, role) e ordenação (por ID, nome, e-mail, criação, último login). Permite alterar roles e excluir usuários. Exibe status de atividade (Ativo/Inativo).
+Rotas Protegidas:
 
-Página de Perfil (Home): Exibe as informações do usuário logado e permite a atualização do nome.
+Acesso condicionado ao status de autenticação e papel do usuário (admin, comum).
 
-Tecnologias Utilizadas
+Painel de Administração:
+
+Listagem de usuários com filtros (nome, role).
+
+Ordenação por: ID, nome, e-mail, criação e último login.
+
+Permite alteração de roles, exclusão e exibição de status (Ativo/Inativo).
+
+Página de Perfil:
+
+Visualização e edição do nome do usuário logado.
+
+🧠 Tecnologias Utilizadas
 Framework: ReactJS
 
 Linguagem: TypeScript
 
 Roteamento: React Router DOM
 
-Gerenciamento de Estado: React Context API
+Estado Global: React Context API
 
-Estilização: CSS puro (com variáveis CSS para consistência)
+Estilização: CSS puro (com variáveis CSS)
 
-Requisições HTTP: Axios
+HTTP Client: Axios
 
 Ícones: Lucide React
 
-Como Configurar e Executar
-Pré-requisitos
-Node.js (v18 ou superior recomendado)
+⚙️ Como Rodar o Projeto
+✅ Pré-requisitos
+Node.js v18 ou superior
 
 npm ou Yarn
 
-O backend da aplicação Conectár deve estar rodando (geralmente em http://localhost:3000).
+Backend rodando (geralmente em: http://localhost:3000)
 
-Instalação e Execução
-Clone este repositório:
+📦 Instalação
+bash
+Copiar
+Editar
+# Clone o repositório
 git clone https://github.com/DevHerbertt/Conecta-Frontend.git
 
-Navegue até a pasta do projeto:
+# Acesse a pasta do projeto
 cd Conecta-Frontend
 
-Instale as dependências:
-npm install (ou yarn)
+# Instale as dependências
+npm install
+# ou
+yarn
+🚀 Execução
+bash
+Copiar
+Editar
+# Inicie o app em modo de desenvolvimento
+npm start
+# ou
+yarn start
+O frontend será iniciado em http://localhost:3001 (ou outra porta disponível).
 
-Crie um arquivo .env na raiz do projeto (se houver variáveis de ambiente no frontend, embora o api.ts esteja fixo no momento).
+🧱 Estrutura e Decisões de Arquitetura
+Componentização: Interface dividida em componentes reutilizáveis e modulares.
 
-Inicie o aplicativo em modo de desenvolvimento:
-npm start (ou yarn start)
+Context API: Controle centralizado do estado de autenticação (usuário + token).
 
-O frontend estará acessível em http://localhost:3001 (ou outra porta disponível).
+Rotas Protegidas: Componente ProtectedRoute gerencia acesso por role/autenticação.
 
-Decisões de Design e Arquitetura
-Componentização: A interface é dividida em componentes reutilizáveis para melhor organização e manutenibilidade.
+Estilização Simples: CSS puro com variáveis e responsividade.
 
-Context API: Utilizada para gerenciamento global do estado de autenticação (usuário e token), evitando prop-drilling.
+Feedback ao Usuário: Carregamentos e erros são tratados nas operações assíncronas.
 
-Rotas Protegidas: Implementação de um ProtectedRoute para controlar o acesso a páginas com base na autenticação e role do usuário.
+Atualização de Perfil: Usuários podem alterar seu nome na página de perfil.
 
-Estilização: Uso de CSS puro com variáveis para manter a simplicidade, consistência visual e responsividade.
+⚠️ Limitações Conhecidas
+Troca de Senha: Ainda não implementada. Exige endpoint seguro no backend com hash.
 
-Requisições Assíncronas: Gerenciamento de estados de carregamento e erro para feedback ao usuário durante as operações de API.
+Login Social: Integração com Google/Microsoft ainda fora do escopo atual.
 
-Atualização de Perfil (Nome): Funcionalidade para usuários atualizarem seu nome diretamente na página de perfil.
-
-Limitações Conhecidas: A troca de senha requer um endpoint dedicado no backend para ser implementada de forma segura (hash da senha), e o login social com Google/Microsoft não foi implementado neste escopo.
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+📁 Variáveis de Ambiente
+O arquivo .env pode ser criado na raiz para customização futura. No momento, a URL da API está fixa no arquivo services/api.ts.
